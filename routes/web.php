@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    //return view('welcome');
-    return 'Hello World';
-});
+Route::get('/',[PageController::class, 'home']);
+Route::get('/about',[PageController::class, 'about']);
+Route::get('/contact',[PageController::class, 'contact']);
